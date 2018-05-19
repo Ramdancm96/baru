@@ -1,0 +1,17 @@
+/* ------------------------------------
+Changelog
+------------------------------------ */
+
+v1.2
+* remove customizer header_image in adminbar
+* description change
+
+v1.1
+* change screenshot bigger
+* remove customizer header_image
+* change post formats from parent theme
+* add License tag and License URI tag to the style.css
+
+v1.0
+* Initial Release
+

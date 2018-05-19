@@ -1,0 +1,62 @@
+<p>Select a country and the country's states or provinces are listed on the right.  If the country doesn't have any states or provines configured, a text box is displayed.</p>
+<p>In this demo, <b>Canada</b>, <b>United States</b> and the <b>United Kingdom</b> have states or provinces available.  Other countries will give the text box.</p>
+
+
+<h2><a href="demo.html">Single Address Form</a></h2>  
+<h2><a href="demo2.html">Double Shipping &amp; Billing Address Form</a></b>
+
+<form>
+<!-- The id of the country field(s).  If more than one, seperate with spaces -->
+<input type="hidden" value="shipCountrySelect billCountrySelect" name="cs_config_country_field" id="cs_config_country_field">
+<input type="hidden" value="shipStateSelect billStateSelect"     name="cs_config_state_field"   id="cs_config_state_field">
+
+
+<!-- The id of the the fields holding the default values.  If more than one, seperate with spaces -->
+<input type="hidden" value="shipCountryDefault billCountryDefault" name="cs_config_country_default" id="cs_config_country_default">
+<input type="hidden" value="shipStateDefault billStateDefault"     name="cs_config_state_default"   id="cs_config_state_default">
+
+
+<!-- The actual default values -->
+<input type="hidden" value="US" name="shipCountryDefault" id="shipCountryDefault">
+<input type="hidden" value=""   name="shipStateDefault"   id="shipStateDefault">
+
+<input type="hidden" value="US" name="billCountryDefault" id="billCountryDefault">
+<input type="hidden" value=""   name="billStateDefault"   id="billStateDefault">
+
+<SCRIPT type="text/javascript" SRC="country_state.js"></SCRIPT>
+
+<h2>Two drop downs on one page</h2>
+
+<h3>Shipping</h3>
+State: <div>
+         <select id='shipStateSelect' name='ship_state'>
+         </select>
+       </div>
+
+Country:  
+      <div>
+         <select id='shipCountrySelect' name='ship_country' onchange='updateState(this.id)'>
+         </select>
+       </div>
+<hr>
+<h3>Billing</h3>
+
+State: <div>
+         <select id='billStateSelect' name='bill_state'>
+         </select>
+       </div>
+
+Country:  
+      <div>
+         <select id='billCountrySelect' name='bill_country' onchange='updateState(this.id)'>
+	      </select>
+       </div>
+
+	<SCRIPT  type="text/javascript">initCountry(); </SCRIPT>
+</form>
+
+	<br>
+	<a href=http://downhomeconsulting.com/Downloads/files/archive/country_state-1.1.zip>Download</a>
+
+    <br>
+	<a target=_blank href=http://downhomeconsulting.com/Downloads/files/unarchived/country_state-1.1/README>README</a>
